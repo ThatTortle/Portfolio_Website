@@ -166,6 +166,31 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
+// Restore the portfolio page when returning from a project
+const savedPage = sessionStorage.getItem("activePage");
+
+if (savedPage) {
+
+  for (let i = 0; i < pages.length; i++) {
+
+    if (pages[i].dataset.page === savedPage) {
+
+      pages[i].classList.add("active");
+      navigationLinks[i].classList.add("active");
+
+    } else {
+
+      pages[i].classList.remove("active");
+      navigationLinks[i].classList.remove("active");
+
+    }
+
+  }
+
+  sessionStorage.removeItem("activePage");
+
+}
+
 
 
 

@@ -38,7 +38,8 @@
 
       <!-- Back button -->
       <a href="./index.html#portfolio"
-         class="project-back-link">
+         class="project-back-link"
+         onclick="sessionStorage.setItem('activePage', 'portfolio')">
 
         <ion-icon name="arrow-back-outline"></ion-icon>
         <span>Back to Portfolio</span>
@@ -51,12 +52,14 @@
         <p class="project-category">Video Game</p>
 
         <h1 class="h2 article-title">
-          A Walk Through the Woods
+          Late night fishing
         </h1>
 
         <p class="project-intro">
-          A short introduction to the game and the experience
-          you wanted to create.
+          A game I made all by myself as a little side project:
+          a horror fishing simulator with a fun daytime game
+          mode where even people who dislike horror can
+          enjoy the experience of fishing.
         </p>
 
       </header>
@@ -66,8 +69,8 @@
       <!-- Main project image -->
       <figure class="project-hero">
         <img
-          src="./assets/images/project-1.png"
-          alt="A Walk Through the Woods gameplay"
+          src="./assets/images/project-3.png"
+          alt="Late night fishing"
         >
       </figure>
 
@@ -110,7 +113,7 @@
 
           <div class="project-detail-item">
             <h3 class="h5">Role</h3>
-            <p>Game Designer</p>
+            <p>Game Designer, Engineer, sound designer</p>
           </div>
 
           <div class="project-detail-item">
@@ -120,12 +123,12 @@
 
           <div class="project-detail-item">
             <h3 class="h5">Team Size</h3>
-            <p>4 People</p>
+            <p>1 person (me)</p>
           </div>
 
           <div class="project-detail-item">
             <h3 class="h5">Duration</h3>
-            <p>3 Months</p>
+            <p>2 weeks</p>
           </div>
 
         </div>
@@ -173,7 +176,8 @@
 
       <!-- Back to portfolio at the bottom -->
       <a href="./index.html#portfolio"
-         class="project-back-link project-back-bottom">
+         class="project-back-link project-back-bottom"
+         onclick="sessionStorage.setItem('activePage', 'portfolio')">
 
         <ion-icon name="arrow-back-outline"></ion-icon>
         <span>Back to Portfolio</span>

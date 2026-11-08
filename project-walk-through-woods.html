@@ -38,7 +38,8 @@
 
       <!-- Back button -->
       <a href="./index.html#portfolio"
-         class="project-back-link">
+         class="project-back-link"
+         onclick="sessionStorage.setItem('activePage', 'portfolio')">
 
         <ion-icon name="arrow-back-outline"></ion-icon>
         <span>Back to Portfolio</span>
@@ -122,7 +123,7 @@
 
           <div class="project-detail-item">
             <h3 class="h5">Team Size</h3>
-            <p>me</p>
+            <p>1 person (me)</p>
           </div>
 
           <div class="project-detail-item">
@@ -175,7 +176,8 @@
 
       <!-- Back to portfolio at the bottom -->
       <a href="./index.html#portfolio"
-         class="project-back-link project-back-bottom">
+         class="project-back-link project-back-bottom"
+         onclick="sessionStorage.setItem('activePage', 'portfolio')">
 
         <ion-icon name="arrow-back-outline"></ion-icon>
         <span>Back to Portfolio</span>
