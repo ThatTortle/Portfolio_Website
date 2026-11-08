@@ -1,0 +1,154 @@
+
+/*-----------------------------------*\
+  #PROJECT DETAIL PAGE
+\*-----------------------------------*/
+
+.project-detail-main {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin: 15px auto 75px;
+  padding: 0 12px;
+}
+
+.project-detail {
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow-1);
+}
+
+.project-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+
+  margin-bottom: 25px;
+
+  transition: var(--transition-1);
+}
+
+.project-back-link:hover {
+  color: var(--orange-yellow-crayola);
+}
+
+.project-back-link ion-icon {
+  font-size: 18px;
+}
+
+.project-header {
+  margin-bottom: 25px;
+}
+
+.project-header .project-category {
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+.project-intro {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.7;
+  margin-top: 15px;
+}
+
+.project-hero {
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.project-hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid var(--jet);
+}
+
+.project-section {
+  margin-bottom: 40px;
+}
+
+.project-section-title {
+  margin-bottom: 15px;
+}
+
+.project-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.8;
+}
+
+.project-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+
+  background: var(--bg-gradient-jet);
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+}
+
+.project-detail-item h3 {
+  color: var(--orange-yellow-crayola);
+  margin-bottom: 5px;
+}
+
+.project-detail-item p {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+}
+
+.project-showcase {
+  margin-top: 25px;
+}
+
+.project-showcase img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--jet);
+}
+
+.project-showcase figcaption {
+  color: var(--light-gray-70);
+  font-size: var(--fs-7);
+  margin-top: 10px;
+}
+
+.project-back-bottom {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+
+/*-----------------------------------*\
+  #RESPONSIVE
+\*-----------------------------------*/
+
+@media (min-width: 580px) {
+
+  .project-detail {
+    padding: 30px;
+  }
+
+  .project-details {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .project-detail-main {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+}
