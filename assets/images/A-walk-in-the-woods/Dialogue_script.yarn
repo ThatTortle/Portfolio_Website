@@ -1,0 +1,162 @@
+﻿title: Start
+---
+<<declare $TalkedToHorse = false>>
+<<declare $AmountofFriendsFound = 0>>
+<<declare $AmountofFriendsEaten = 0>>
+===
+title: Horse
+---
+<<AnimalNoise QuestGiver>>
+<<if ($TalkedToHorse == true && $AmountofFriendsFound + $AmountofFriendsEaten < 5)>>
+    Horse: It seems you haven't found all my friends yet.
+    Horse: Come back to me when you've found them all!
+    Horse: We don't want anyone to feel left out!
+<<elseif ($TalkedToHorse == true && $AmountofFriendsFound + $AmountofFriendsEaten == 5)>>
+    <<if ($AmountofFriendsFound == 5)>>
+    Horse: Wow you found all of my friends! Thank you soo much!
+    Horse: Now we can finnaly start the party!
+    Horse: I just don't have enough cake for the new human friend...
+    Horse: Sorry dude...
+    <<FoundAllFriends -GameManager->>
+    <<elseif ($AmountofFriendsEaten == 5)>>
+    Horse: I think I heard some screaming in the forest...
+    Horse: Where did all my friends go?
+    Horse: And why do you look so hungry?
+    <<AteAllFriends -GameManager->>
+    <<elseif ($AmountofFriendsEaten > 3)>>
+    Horse: Where most of my friends?
+    Horse: Wait?
+    Horse: You said you don't more another piece of cake?
+    Horse: Alright I guess...
+    <<AteMostFriends -GameManager->>
+    <<elseif ($AmountofFriendsFound > 3)>>
+    Horse: Yay most of my friends are here!
+    Horse: I am missing some people tho...
+    Horse: I guess they didn't make it...
+    Horse: More cake for us I guess!!!
+    <<FoundMostFriends -GameManager->>
+    <<endif>>
+    
+<<else>>
+    Horse: Hello random person I just met!
+    Horse: I invited my friends to a party but they seem to have gotten lost.
+    Horse: Could you go find and bring them to me?
+    -> Sure!
+        Horse: Thanks alot!
+        Horse: I'll make sure to save a slice of cake for you!
+    -> No?
+        Horse: You think you have a choice?!?
+        Horse: Bold of you to assume that buddy!
+        Horse: Now you better get my friends before I do something I'll regret!
+
+    <<set $TalkedToHorse = true>>
+<<endif>>
+
+<<StopInteracting QuestGiver>>
+===
+title: Dog
+---
+<<AnimalNoise Dog>>
+Dog: Hello random person I just met!
+Dog: Are you helping me find horse?
+Dog: Thanks alot human!
+Dog: You look a bit hungry tho?
+Dog: Are you sure you're ok?
+
+-> Eat the dog
+    <<Eaten Dog>>
+    <<set $AmountofFriendsEaten += 1>>
+-> Yeah I'm ok!
+    Dog: Alright!
+    Dog: Lets go!
+    <<AnimalNoise Dog>>
+    <<set $AmountofFriendsFound += 1>>
+
+<<collect Dog>>
+<<StopInteracting Dog>>
+===
+title: Kitty
+---
+<<AnimalNoise Kitty>>
+Kitty: Hello random person I just met!
+Kitty: Wow you're big!
+Kitty: Can you help me find my friend Horse?
+Kitty: I lost the way to find him.
+<<wait 1>>
+Kitty: You seem kinda hungry human?
+
+-> Eat the Kitty
+    <<Eaten Kitty>>
+    <<set $AmountofFriendsEaten += 1>>
+-> I'm fine, lets bring you to Horse.
+    Kitty: Thanks alot human!
+    Kitty: Lets Become good friends!
+    <<AnimalNoise Kitty>>
+    <<set $AmountofFriendsFound += 1>>
+
+<<collect Kitty>>
+<<StopInteracting Kitty>>
+===
+title: Chicken
+---
+<<AnimalNoise Chicken>>
+Chicken: Hello random person I just met!
+Chicken: You seem afully hungry?
+Chicken: Anyways!
+Chicken: I seem to have lost my way while trying to reach Horse.
+Chicken: Could you perhaps help me find him human?
+
+-> Eat the Chicken
+    <<Eaten Chicken>>
+    <<set $AmountofFriendsEaten += 1>>
+-> Horse told me to bring you so lets go!
+    Chicken: Thanks alot human.
+    Chicken: You have my gratitude.
+    <<AnimalNoise Chicken>>
+    <<set $AmountofFriendsFound += 1>>
+
+<<collect Chicken>>
+<<StopInteracting Chicken>>
+===
+title: Penguin
+---
+<<AnimalNoise Penguin>>
+Penguin: Hello random person I just met!
+Penguin: are you alright? You look starved?
+Penguin: Ahh I know, Horse should have some food left over!
+Penguin: If you could help me find him I'm sure we can get you something to eat!
+
+-> Eat the Penguin
+    <<Eaten Penguin>>
+    <<set $AmountofFriendsEaten += 1>>
+-> Horse told me to find you anyways so that works out.
+    Penguin: Great!
+    Penguin: Lets go human!
+    <<AnimalNoise Penguin>>
+    <<set $AmountofFriendsFound += 1>>
+
+<<collect Penguin>>
+<<StopInteracting Penguin>>
+===
+title: Tiger
+---
+<<AnimalNoise Tiger>>
+Tiger: Hello random person I just met!
+Tiger: You look like you could eat a horse!
+Tiger: I'm joking ofcourse!
+Tiger: But talking about horses...
+Tiger: I seem to have lost my way.
+Tiger: Could you help me find my friend Horse?
+
+-> Eat the Tiger
+    <<Eaten Kitty>>
+    <<set $AmountofFriendsEaten += 1>>
+-> Horse told me to find you so that works out great!
+    Tiger: Thanks alot human!
+    Tiger: Lets go then!
+    <<AnimalNoise Tiger>>
+    <<set $AmountofFriendsFound += 1>>
+
+<<collect Tiger>>
+<<StopInteracting Tiger>>
+===

@@ -19,6 +19,9 @@
   box-shadow: var(--shadow-1);
 }
 
+
+
+
 .project-back-link {
   display: inline-flex;
   align-items: center;
@@ -32,7 +35,33 @@
   transition: var(--transition-1);
 }
 
+
+.project-page-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+
+  margin-top: 10px;
+  margin-bottom: 25px;
+  
+
+  transition: var(--transition-1);
+}
+
+.project-back-link,
+.project-page-link {
+  display: flex;
+  width: fit-content;
+}
+
+
 .project-back-link:hover {
+  color: var(--orange-yellow-crayola);
+}
+.project-page-link:hover {
   color: var(--orange-yellow-crayola);
 }
 
@@ -128,6 +157,73 @@
 }
 
 
+
+
+/*-----------------------------------*\
+  #YARN SPINNER VIEWER
+\*-----------------------------------*/
+
+.yarn-viewer {
+  margin-top: 20px;
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Viewer header */
+
+.yarn-viewer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: var(--onyx);
+  border-bottom: 1px solid var(--jet);
+}
+
+.yarn-viewer-header span,
+.yarn-viewer-header a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.yarn-viewer-header span {
+  color: var(--white-2);
+  font-size: var(--fs-6);
+}
+
+.yarn-viewer-header a {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-7);
+  transition: var(--transition-1);
+}
+
+.yarn-viewer-header a:hover {
+  opacity: 0.7;
+}
+
+/* Code window */
+
+.yarn-viewer pre {
+  padding: 20px;
+  margin: 0;
+  max-height: 500px;
+  overflow: auto;
+  text-align: left;
+}
+
+.yarn-viewer code {
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--white-2);
+  white-space: pre;
+}
+
+
+
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
@@ -151,4 +247,42 @@
     margin-bottom: 60px;
   }
 
+}
+
+
+/*-----------------------------------*\
+  #PROJECT PDF SHOWCASE
+\*-----------------------------------*/
+
+.project-pdf {
+  width: 100%;
+  height: 700px;
+  margin-top: 20px;
+
+  overflow: hidden;
+  border-radius: 12px;
+
+  background: var(--eerie-black-1);
+}
+
+.project-pdf iframe {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+}
+
+.project-document-link {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-6);
+
+  transition: var(--transition-1);
+}
+
+.project-document-link:hover {
+  color: var(--white-2);
 }
