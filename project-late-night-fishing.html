@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>A Walk Through the Woods | Portfolio</title>
+  <title>Late Night Fishing | Portfolio</title>
 
   <!-- Reuse your existing stylesheet -->
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -46,6 +46,17 @@
 
       </a>
 
+
+      <!-- Project Page button-->
+      <a href="https://thattortle.itch.io/late-night-fishing"
+          class="project-page-link">
+
+
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+          <span>Platform page</span>
+      </a>
+
+
       <!-- Project introduction -->
       <header class="project-header">
 
@@ -82,8 +93,9 @@
         </h2>
 
         <p class="project-text">
-          Describe the concept of your game, its goals,
-          and the experience you wanted to create.
+          Late night fishing was a project I made to test and work on immersion from the player.
+          I decided to make it a horror game for the fact that with these types of games its easy to tell when someone is immeresed if
+          the jumpscares and atmoshpere get to them. 
         </p>
 
       </section>
@@ -96,8 +108,12 @@
         </h2>
 
         <p class="project-text">
-          Explain what you personally worked on during
-          the project.
+          - Sound editing (the actual sounds were external assets) <br>
+          - Level design (the actual assets were from the unity store) <br>
+          - Post proccessing <br>
+          - Coding <br>
+          - Gameplay Design <br>
+          - Narrative Design <br>
         </p>
 
       </section>
@@ -128,7 +144,7 @@
 
           <div class="project-detail-item">
             <h3 class="h5">Duration</h3>
-            <p>2 weeks</p>
+            <p>2-3 weeks</p>
           </div>
 
         </div>
@@ -143,19 +159,96 @@
         </h2>
 
         <p class="project-text">
-          Showcase your design process, iterations,
-          challenges, and solutions.
+          Below you can find some screenshots and explenations about the design process and choices that were made.
         </p>
 
         <figure class="project-showcase">
+
+          <figcaption>
+            <strong>Story</strong>
+            <br>
+            <br>
+            I wanted to convey a sense of story and immersion to the player through the fish pop-ups.
+            The text being first person, bringing a sense of the player commenting on their catch, thereby immersing them more.
+            Starting slow and nice at the beginning, before ramping up the horror aspect.
+            This way it brings a nice flow to the story so players don’t get whiplash from the sudden story beats.
+          </figcaption>
+
           <img
-            src="./assets/images/project-woods-1.png"
+            src="./assets/images/LateNightFishing/Development-1.png"
             alt="Development process screenshot"
             loading="lazy"
           >
+        </figure>
+
+
+        <figure class="project-showcase">
+
           <figcaption>
-            An example of the development process.
+            <strong>Sound design</strong>
+            <br>
+            <br>
+            As my goal was immersion I realised quickly how important the audio was. Therefore I focussed quite a bit on the sound design of this project.
+            I made sure to add all the sounds I could think of when one would go fishing. (bobber hitting the water, waves, crickets in the night) and some that were
+            neccecairy for the gameplay to run smoothly (like a fish spawning in having a noise). 
+            <br>
+            <br>
+            But simply having the audio doesn't guarantee immersion or horror. Therefore playing with the audio when the horror started was also important.
+            One example would be how I cut the background noise when the user started the scary part of the game, taking away a sense of peace and calm, and letting them sit in silence for a moment.
+            After that I would replace the background sound with a low bass sound that continue'd to play to increase tension just before the jumpscare.
           </figcaption>
+
+          <img
+            src="./assets/images/LateNightFishing/Development-2.png"
+            alt="Development process screenshot"
+            loading="lazy"
+          >
+        </figure>
+
+        <figure class="project-showcase">
+
+          <figcaption>
+            <strong>Performance</strong>
+            <br>
+            <br>
+            As I ran into some performance issue's with running the game on my laptop I had to make some simple changes to my game.
+            The rendering of the level took a lot of work for the console which meant my laptop fans would try and take off every time I tried to start the game.
+            To fix this issue I implemented a loading screen that would load the scene in the background at a pace the laptop could comportably handle.
+            By having a loading screen I would be able to fix performance without having to showcase the player how the level was being rendererd in real time.
+          </figcaption>
+
+          <img
+            src="./assets/images/LateNightFishing/Development-3.png"
+            alt="Development process screenshot"
+            loading="lazy"
+          >
+        </figure>
+
+
+        <figure class="project-showcase">
+
+          <figcaption>
+            <strong>Settings / UX design</strong>
+            <br>
+            <br>
+            While there aren’t many settings, this was my first time working on an actual settings menu.
+            This game’s audio had such a significant role meaning I didn’t want to leave it up to chance if the player found it too loud or quiet.
+            Therefore I decided to make an audio slider in the settings which allowed players to adjust their audio levels so everyone could enjoy the game with their own preferences.
+            While not implemented in this game I did research other settings like changing keybinds and the likes for future projects,
+            allowing for my games to be more accessable in the future.
+          </figcaption>
+
+          <img
+            src="./assets/images/LateNightFishing/Development-4.png"
+            alt="Development process screenshot"
+            loading="lazy"
+          >
+
+          <img
+            src="./assets/images/LateNightFishing/Development-5.png"
+            alt="Development process screenshot"
+            loading="lazy"
+          >
         </figure>
 
       </section>
@@ -168,8 +261,13 @@
         </h2>
 
         <p class="project-text">
-          Explain the final result and what you learned
-          from developing this project.
+          In the end this project was a great success with my immersion tests!
+          I playtested my game multiple times with my peers where the first player who tested got so scared at the jumpscare they yelled in class.
+          After that unfortunately the immersion went down a little for the other users as they were either too scared to sit fully in front of the screen.
+          Or they were too scared to fully immerse themselves and refused to allow themselves to get immersed (by constantly trying to talk to me, or simply not putting in the headphones).
+          <br>
+          <br>
+          In the end however I think this means the game was a great success as I was even able to terrify players who have yet to play the game.
         </p>
 
       </section>
